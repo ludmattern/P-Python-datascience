@@ -22,6 +22,18 @@ Python - 4 - Dod/          # Design patterns and optimization
 | **Python 3** | OOP - Object-oriented programming | [View project](https://projects.intra.42.fr/projects/python-3-oop) |
 | **Python 4** | DoD - Design patterns and optimization | [View project](https://projects.intra.42.fr/projects/python-4-dod) |
 
+## How to use this repository
+
+1. **Navigation**
+   - Each folder corresponds to a learning module
+   - Check the project links for detailed instructions
+   - Follow the numerical order for logical progression
+
+3. **Prerequisites**
+   - Python 3.x installed
+   - Basic programming knowledge
+   - Development environment configured
+   - see [requirements.txt](requirements.txt) for dependencies
 
 ---
 
