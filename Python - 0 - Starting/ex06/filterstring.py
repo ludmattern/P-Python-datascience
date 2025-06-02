@@ -10,21 +10,15 @@ def filter_words():
     if len(argv) != 3:
         raise AssertionError("the arguments are bad")
 
-    try:
-        string_arg = argv[1]
-        length = int(argv[2])
+    string_arg = argv[1]
+    length = int(argv[2])
 
-        words = string_arg.split()
+    words = string_arg.split()
 
-        filtered_words = ft_filter(lambda word: len(word) > length, words)
+    filtered_words = ft_filter(lambda word: len(word) > length, words)
 
-        result = [word for word in filtered_words]
-        print(result)
-
-    except ValueError:
-        raise AssertionError("the arguments are bad")
-    except Exception:
-        raise AssertionError("the arguments are bad")
+    result = [word for word in filtered_words]
+    print(result)
 
 
 def main():
@@ -33,8 +27,8 @@ def main():
     """
     try:
         filter_words()
-    except AssertionError as e:
-        print(f"AssertionError: {e}")
+    except (AssertionError, ValueError, Exception):
+        print("AssertionError: the arguments are bad")
 
 
 if __name__ == "__main__":

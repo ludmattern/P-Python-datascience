@@ -1,10 +1,12 @@
+from sys import argv
+
+
 def check_number():
     """
     Function that checks if a number is odd or even.
     Raises AssertionError if more than one argument is provided or if the
     argument is not an integer.
     """
-    from sys import argv
 
     argc = len(argv)
 
