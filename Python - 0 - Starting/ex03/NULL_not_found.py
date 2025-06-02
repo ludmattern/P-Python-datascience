@@ -3,14 +3,14 @@ def NULL_not_found(object: any) -> int:
     Function that prints the object type of all types of "Null".
     Returns 0 if the object is a null-like value, 1 otherwise.
     """
-    import math
+    from math import isnan
 
     obj_type = type(object)
 
-    if object is None:
+    if obj_type is None:
         print(f"Nothing: {object} {obj_type}")
         return 0
-    elif obj_type is float and math.isnan(object):
+    elif obj_type is float and isnan(object):
         print(f"Cheese: {object} {obj_type}")
         return 0
     elif obj_type is bool and object is False:

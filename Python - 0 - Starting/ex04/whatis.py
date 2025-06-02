@@ -1,19 +1,21 @@
-import sys
-
-
 def main():
     """
-    Script that takes a number as argument and checks whether it is odd or even.
-    Prints an AssertionError if more than one argument is provided or if the argument is not an integer.
+    Script that takes a number as argument and checks whether itnis odd or even
+    Prints an AssertionError if more than one argument is provided or if the
+    argument is not an integer.
     """
-    if len(sys.argv) == 1:
+    from sys import argv
+
+    argc = len(argv)
+
+    if argc == 1:
         return
 
-    if len(sys.argv) > 2:
+    if argc > 2:
         print("AssertionError: more than one argument is provided")
         return
 
-    arg = sys.argv[1]
+    arg = argv[1]
 
     try:
         number = int(arg)
