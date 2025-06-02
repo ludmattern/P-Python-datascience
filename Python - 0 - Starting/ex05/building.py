@@ -53,11 +53,11 @@ def display_results(counts):
     print(f"{counts['digits']} digits")
 
 
-def main():
+def process_text():
     """
-    Main function that handles command line arguments and user input
+    Process text input and analyze it.
+    Raises AssertionError if more than one argument is provided.
     """
-
     argc = len(argv)
 
     if argc > 2:
@@ -76,8 +76,17 @@ def main():
             return
 
     counts = analyze_text(text)
-
     display_results(counts)
+
+
+def main():
+    """
+    Main function that handles exceptions from process_text.
+    """
+    try:
+        process_text()
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
 
 
 if __name__ == "__main__":

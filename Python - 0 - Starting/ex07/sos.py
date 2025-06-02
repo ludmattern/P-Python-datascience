@@ -1,9 +1,10 @@
 from sys import argv
 
 
-def main():
+def encode_to_morse():
     """
-    Program that takes a string as an argument and encodes it into Morse Code.
+    Encodes a string argument into Morse Code.
+    Raises AssertionError if arguments are invalid.
     """
     NESTED_MORSE = {
         " ": "/ ",
@@ -66,8 +67,15 @@ def main():
     print(morse_code.rstrip())
 
 
-if __name__ == "__main__":
+def main():
+    """
+    Main function that handles exceptions from encode_to_morse.
+    """
     try:
-        main()
+        encode_to_morse()
     except AssertionError as e:
         print(f"AssertionError: {e}")
+
+
+if __name__ == "__main__":
+    main()

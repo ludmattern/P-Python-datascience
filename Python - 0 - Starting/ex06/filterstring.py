@@ -2,14 +2,13 @@ from sys import argv
 from ft_filter import ft_filter
 
 
-def main():
+def filter_words():
     """
     Filters a list of words based on their length.
-    Usage: python filterstring.py "string" number
+    Raises AssertionError if arguments are invalid.
     """
     if len(argv) != 3:
-        print("AssertionError: the arguments are bad")
-        return
+        raise AssertionError("the arguments are bad")
 
     try:
         string_arg = argv[1]
@@ -23,9 +22,19 @@ def main():
         print(result)
 
     except ValueError:
-        print("AssertionError: the arguments are bad")
+        raise AssertionError("the arguments are bad")
     except Exception:
-        print("AssertionError: the arguments are bad")
+        raise AssertionError("the arguments are bad")
+
+
+def main():
+    """
+    Main function that handles exceptions from filter_words.
+    """
+    try:
+        filter_words()
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
 
 
 if __name__ == "__main__":
