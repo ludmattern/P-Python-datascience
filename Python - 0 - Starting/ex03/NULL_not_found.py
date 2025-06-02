@@ -7,7 +7,7 @@ def NULL_not_found(object: any) -> int:
 
     obj_type = type(object)
 
-    if obj_type is None:
+    if object is None:
         print(f"Nothing: {object} {obj_type}")
         return 0
     elif obj_type is float and isnan(object):
