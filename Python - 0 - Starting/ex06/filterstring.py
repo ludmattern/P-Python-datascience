@@ -19,7 +19,7 @@ def main():
 
         filtered_words = ft_filter(lambda word: len(word) > length, words)
 
-        result = list(filtered_words)
+        result = [word for word in filtered_words]
         print(result)
 
     except ValueError:
