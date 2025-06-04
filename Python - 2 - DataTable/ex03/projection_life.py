@@ -11,7 +11,7 @@ from matplotlib.ticker import FuncFormatter
 from load_csv import load
 
 
-def plot_life_expectancy_vs_gdp(date="1800"):
+def plot_life_expectancy_vs_gdp(date="1900"):
     """
     Function to display life expectancy vs GDP per capita for the given year
     """
