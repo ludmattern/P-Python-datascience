@@ -13,18 +13,30 @@ class King(Baratheon, Lannister):
         """
         super().__init__(first_name, is_alive)
 
-    def set_eyes(self, eyes: str):
-        """Set the eye color of the character."""
-        self.eyes = eyes
-
-    def set_hairs(self, hairs: str):
-        """Set the hair color of the character."""
-        self.hairs = hairs
-
     def get_eyes(self):
-        """Return the eye color of the character."""
-        return self.eyes
+        """Get the eye color of the character."""
+        return self._eyes
+
+    def set_eyes(self, value: str):
+        """Set the eye color of the character."""
+        self._eyes = value
 
     def get_hairs(self):
-        """Return the hair color of the character."""
-        return self.hairs
+        """Get the hair color of the character."""
+        return self._hairs
+
+    def set_hairs(self, value: str):
+        """Set the hair color of the character."""
+        self._hairs = value
+
+    eyes = property(
+        fget=get_eyes,
+        fset=set_eyes,
+        doc="The eye color property."
+    )
+
+    hairs = property(
+        fget=get_hairs,
+        fset=set_hairs,
+        doc="The hair color property."
+    )
