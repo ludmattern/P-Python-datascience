@@ -1,4 +1,7 @@
-def ft_statistics(*args, **kwargs):
+from typing import Any
+
+
+def ft_statistics(*args: Any, **kwargs: Any) -> None:
     """
     Calculate various statistics on provided data.
     Uses only Python built-in functions.
